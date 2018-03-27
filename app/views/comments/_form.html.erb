@@ -1,0 +1,11 @@
+<h3>Dodaj komentar</h3>
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :Komentar %><br>
+    <%= f.text_area(:body, {:class => 'form-control'}) %>
+  </p>
+ 
+  <p>
+    <%= f.submit({:class => 'btn btn-md btn-outline-primary'}) %>
+  </p>
+<% end %>

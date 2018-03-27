@@ -1,0 +1,10 @@
+<h3>Komentarji</h3>
+<% @post.comments.each do |comment| %>
+    <div class='card p-3'>
+    <p><%= comment.body %></p>
+    <div class="text-right"><%= link_to "Izbriši", [comment.post, comment],
+                            method: :delete,
+                            data: {confirm: 'Ali ste prepričani?'},
+                            :class => 'btn btn-danger' %></div>
+    </div>
+<% end %>
