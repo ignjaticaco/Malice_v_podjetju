@@ -30,6 +30,7 @@ gem 'bootstrap', '~> 4.0.0'
 
 gem 'therubyracer'
 gem 'jquery-ui-rails'
+gem 'devise'
 
 
 # Use Unicorn as the app server
