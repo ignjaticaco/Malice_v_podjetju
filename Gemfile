@@ -28,6 +28,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap', '~> 4.0.0'
 
+gem 'therubyracer'
+gem 'jquery-ui-rails'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
