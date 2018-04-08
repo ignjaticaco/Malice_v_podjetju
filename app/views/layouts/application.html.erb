@@ -21,12 +21,15 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-          <li class="nav-item">
-            <%= link_to "Dodaj malico", new_post_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Prijava", admin_session_path, class: "nav-link" %>
-          </li>
+            <% if admin_signed_in? %>
+        <!--This block is only visible to signed in admins -->
+          <li class="nav-item"><%= link_to "Dodaj malico", new_post_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to 'Moj račun', edit_admin_registration_path, class: "nav-link"  %></li>
+          <li class="nav-item"><%= link_to 'Odjava', destroy_admin_session_path, :method => :delete, class: "nav-link" %></li>
+        <!-- The block ends here -->
+        <% else %>
+          <li class="nav-item"><%= link_to "Prijava", new_admin_session_path, class: "nav-link" %></li>
+        <% end %>
       </div>
     </nav>
 

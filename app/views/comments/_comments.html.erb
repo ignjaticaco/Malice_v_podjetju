@@ -1,10 +1,12 @@
 <h3>Komentarji</h3>
 <% @post.comments.each do |comment| %>
     <div class='card p-3'>
+    <b><%= comment.admin.try(:email) %></b><br>
     <p><%= comment.body %></p>
+    <% if comment.admin_id == current_admin.id %>
     <div class="text-right"><%= link_to "Izbriši", [comment.post, comment],
                             method: :delete,
                             data: {confirm: 'Ali ste prepričani?'},
                             :class => 'btn btn-danger' %></div>
     </div>
-<% end %>
+<% end %><% end %>
