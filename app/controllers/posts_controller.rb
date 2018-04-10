@@ -42,7 +42,19 @@ class PostsController < ApplicationController
         end
     end
     
+    def upvote
+        @post = Post.find(params[:id])
+        @post.upvote_from current_admin
+        redirect_to @post
+    end
+    
+    def downvote
+        @post = Post.find(params[:id])
+        @post.downvote_from current_admin
+        redirect_to @post
+    end
+    
     private def post_params
-        params.require(:post).permit(:body, :title, :date)
+        params.require(:post).permit(:body, :title, :date, :admin_id)
     end
 end
