@@ -29,6 +29,7 @@
         <!-- The block ends here -->
         <% else %>
           <li class="nav-item"><%= link_to "Prijava", new_admin_session_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Sign in with Google", admin_google_oauth2_omniauth_authorize_path %></li>
         <% end %>
       </div>
     </nav>

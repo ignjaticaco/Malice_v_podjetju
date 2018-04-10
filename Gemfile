@@ -31,7 +31,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'therubyracer'
 gem 'jquery-ui-rails'
 gem 'devise'
-
+gem 'omniauth-google-oauth2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
