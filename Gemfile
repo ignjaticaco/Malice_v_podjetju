@@ -31,6 +31,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'therubyracer'
 gem 'jquery-ui-rails'
 gem 'devise'
+gem 'acts_as_votable', '~> 0.11.1'
 
 
 # Use Unicorn as the app server
