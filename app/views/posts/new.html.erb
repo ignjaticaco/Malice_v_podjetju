@@ -21,7 +21,12 @@ if current_admin.admin?)</p>
     <%= f.label :Datum %><br>
     <%= f.text_field(:date, {:class => 'form-control'}) %>
   </p>
-
+  
+  <p>
+    <%= f.label :Slika %><br>
+    <%= f.file_field :avatar %>
+  </p>
+  
   <p>
     <%= f.submit({:class => 'btn btn-md btn-outline-primary'}) %>
   </p>
