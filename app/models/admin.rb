@@ -1,7 +1,8 @@
 class Admin < ActiveRecord::Base
+
   has_many :comments, dependent: :destroy
   has_many :posts, dependent: :destroy
-  
+
 acts_as_voter
 has_many :comments, dependent: :destroy
 has_many :posts, dependent: :destroy
