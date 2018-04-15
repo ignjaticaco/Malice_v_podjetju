@@ -31,22 +31,18 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'therubyracer'
 gem 'jquery-ui-rails'
 gem 'devise'
-<<<<<<< HEAD
-#<<<<<<< HEAD
+
 gem 'omniauth-google-oauth2'
 gem "paperclip", "~> 6.0.0"
-#=======
+
 gem 'acts_as_votable', '~> 0.11.1'
 
-#>>>>>>> 3e1cd039745de6f20ae8f2430bdb5e48a3586fb4
-=======
+
 
 gem 'omniauth-google-oauth2'
 
 gem 'acts_as_votable', '~> 0.11.1'
 
-
->>>>>>> 0b19e474fea81caea66157da1a48a5744f90c39b
 
 # Use Unicorn as the app server
 # gem 'unicorn'
