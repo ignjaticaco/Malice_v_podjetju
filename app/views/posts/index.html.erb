@@ -1,9 +1,11 @@
-<h1 class='mt-2 text-center'>Malice</h1>
+<h1 class='mt-2 text-center'><b>Malice</b></h1>
 <% @posts.each do |post| %>
     <div class='card mt-4 p-3'>
         <h2><%= post.title %></h2>
         <div><%= post.body %></div>
         <div class='text-right'>Datum malice: <%= post.date %></div>
+        <div class='text-right'><% if current_admin.voted_up_on? post %>Na to malico <b>ste</b> prijavljeni
+        <% else %>Na to malico <b>niste</b> prijavljeni<% end %></div>
         <div>
         <%= link_to "Podrobnosti", post_path(post), :class => 'btn btn-secondary' %></div>
         </div>
