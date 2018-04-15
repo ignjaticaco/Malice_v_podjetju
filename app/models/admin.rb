@@ -1,13 +1,7 @@
 class Admin < ActiveRecord::Base
-<<<<<<< HEAD
-  has_many :comments, dependent: :destroy
-  has_many :posts, dependent: :destroy
-  
-=======
 acts_as_voter
 has_many :comments, dependent: :destroy
 has_many :posts, dependent: :destroy
->>>>>>> 3e1cd039745de6f20ae8f2430bdb5e48a3586fb4
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
