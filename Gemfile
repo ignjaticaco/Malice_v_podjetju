@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for Active Record'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,7 +36,11 @@ gem "paperclip", "~> 6.0.0"
 
 gem 'acts_as_votable', '~> 0.11.1'
 
-
+#
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+  gem 'sqlite3'
 
 gem 'omniauth-google-oauth2'
 
@@ -58,10 +61,12 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
-  gem 'watir'
+end
+
+  # koda za postgresql
+group :production do
+    gem 'pg', '~> 0.15'
+    gem 'rails_12factor'
 end
 
