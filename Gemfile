@@ -36,12 +36,6 @@ gem "paperclip", "~> 6.0.0"
 
 gem 'acts_as_votable', '~> 0.11.1'
 
-#
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-  gem 'sqlite3'
-
 gem 'omniauth-google-oauth2'
 
 gem 'acts_as_votable', '~> 0.11.1'
