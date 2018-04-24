@@ -14,13 +14,12 @@
 
 <div class='mt-2'>Na malice sem se prijavil že:  <b><%= current_admin.find_liked_items.size %></b></div>
 
-<div class='mt-4 text-right'>če bi bil dostop do rails c mogoč = vidno samo ZA ADMINE
-(if current_admin.admin?)<br><%= link_to "Uredi", edit_post_path(@post), :class => 'btn btn-primary' %>
+<% if current_admin.admin? %><div class='mt-4 text-right'><br><%= link_to "Uredi", edit_post_path(@post), :class => 'btn btn-primary' %>
 <%= link_to "Izbriši", post_path(@post), 
                         method: :delete,
                         data: {confirm: 'Ali ste prepričani?'},
                         :class => 'btn btn-danger' %></div> 
-
+<% end %>
 <hr>
 
 <%= render 'comments/form' %>
